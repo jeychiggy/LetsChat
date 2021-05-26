@@ -1,0 +1,91 @@
+{
+  "env": {
+    "browser": true,
+    "es6": true
+  },
+  "extends": ["plugin:prettier/recommended"],
+  "plugins": ["react", "jsx-a11y", "import"],
+  "parser": "babel-eslint",
+  "globals": {
+    "__DEV__": true
+  },
+  "rules": {
+    "indent": ["error", "tab", { "SwitchCase": 1 }],
+    "quotes": ["error", "single"],
+    "no-undef": "error",
+    "no-nested-ternary": 0,
+    "no-underscore-dangle": 0,
+    "max-len": 0,
+    "import/prefer-default-export": 0,
+    "import/order": [
+      "error",
+      {
+        "groups": ["external", "builtin", ["sibling", "parent"], "internal", "index"],
+        "alphabetize": {
+          "order": "asc",
+          "caseInsensitive": true
+        },
+        "newlines-between": "always"
+      }
+    ],
+    "react/no-array-index-key": 0,
+    "react/forbid-prop-types": 0,
+    "react/prop-types": 0,
+    "react/no-access-state-in-setstate": 2,
+    "react/no-direct-mutation-state": 2,
+    "react/jsx-key": 2,
+    "react/jsx-no-literals": [
+      2,
+      {
+        "noStrings": true
+      }
+    ],
+    "react/jsx-filename-extension": [
+      2,
+      {
+        "extensions": [".js", ".jsx"]
+      }
+    ],
+    "react/sort-prop-types": [
+      2,
+      {
+        "callbacksLast": true,
+        "ignoreCase": true,
+        "requiredFirst": true,
+        "sortShapeProp": true
+      }
+    ],
+    "react/jsx-sort-default-props": [
+      2,
+      {
+        "ignoreCase": true
+      }
+    ],
+    "react/jsx-sort-props": [
+      2,
+      {
+        "callbacksLast": true,
+        "shorthandFirst": true,
+        "shorthandLast": false,
+        "ignoreCase": true,
+        "noSortAlphabetically": false
+      }
+    ],
+    "react/jsx-indent-props": 0,
+    "react/jsx-indent": 0,
+    "react/jsx-props-no-spreading": 0,
+    "prettier/prettier": [
+      "error",
+      {
+        "printWidth": 120,
+        "trailingComma": "none",
+        "semi": false,
+        "tabWidth": 2,
+        "useTabs": true,
+        "singleQuote": true,
+        "bracketSpacing": true,
+        "jsxBracketSameLine": false
+      }
+    ]
+  }
+}
