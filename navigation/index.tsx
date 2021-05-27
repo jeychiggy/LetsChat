@@ -11,6 +11,7 @@ import {View} from 'react-native'
 import {MaterialCommunityIcons, Octicons, AntDesign, MaterialIcons, FontAwesome5} from '@expo/vector-icons'
 
 import ChatRoomScreen from '../screens/ChatRoomScreen';
+import Contacts from '../screens/Contacts';
 import { RootStackParamList } from '../types';
 import MainTabNavigator from './MainTabNavigator';
 import LinkingConfiguration from './LinkingConfiguration';
@@ -69,7 +70,9 @@ function RootNavigator() {
                   <MaterialCommunityIcons name="dots-vertical" size={22} color={Colors.light.background}/>
               </View>
           )
-      })}
+      })}/>
+      <Stack.Screen name="Contacts"
+                    component={Contacts}
       />
     </Stack.Navigator>
   );
