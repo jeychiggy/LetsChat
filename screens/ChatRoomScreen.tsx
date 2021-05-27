@@ -1,5 +1,7 @@
 import React from 'react'
-import {Text} from 'react-native'
+import { FlatList} from 'react-native'
+import ChatMessage from '../components/ChatMessage'
+import chatRoomData from '../data/Chats'
 
 import {useRoute} from '@react-navigation/native'
 
@@ -9,7 +11,7 @@ const ChatRoomScreen = () => {
     console.log(route.params)
 
     return (
-        <Text>ChatRoom</Text>
+        <FlatList inverted data={chatRoomData.messages} renderItem={({item}) => <ChatMessage message={item}/>}/>
     )
 }
 

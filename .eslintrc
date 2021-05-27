@@ -5,7 +5,7 @@
   },
   "extends": ["plugin:prettier/recommended"],
   "plugins": ["react", "jsx-a11y", "import"],
-  "parser": "babel-eslint",
+  "parser": "@babel/eslint-parser",
   "globals": {
     "__DEV__": true
   },
